@@ -1,0 +1,28 @@
+{
+  "name": "react-native-select-dropdown-customized",
+  "version": "0.1.0",
+  "description": "react-native-select-dropdown customized project.",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "android",
+    "ios",
+    "dropdown",
+    "select",
+    "option",
+    "selector",
+    "picker",
+    "menu",
+    "modal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Owonie/react-native-select-dropdown-customized"
+  },
+  "author": "Owon (Owonie)",
+  "license": "MIT"
+}
