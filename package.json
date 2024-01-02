@@ -24,8 +24,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Owonie/react-native-select-dropdown-customized"
+    "url": "https://github.com/owonie/react-native-select-dropdown-customized"
   },
-  "author": "Owon (Owonie)",
+  "author": "owon (owonie)",
   "license": "MIT"
 }
