@@ -1,7 +1,7 @@
 import type * as React from 'react';
-import {StyleProp, ViewStyle, TextStyle} from 'react-native';
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
-declare module 'react-native-select-dropdown' {
+declare module '@owonie/react-native-select-dropdown-customized' {
   export type SelectDropdownProps = {
     /**
      * array of data that will be represented in dropdown, can be array of objects
@@ -126,11 +126,17 @@ declare module 'react-native-select-dropdown' {
     /**
      * function returns React component for search input icon
      */
-    renderSearchInputLeftIcon?: (selectedItem: any, index: number) => React.ReactNode;
+    renderSearchInputLeftIcon?: (
+      selectedItem: any,
+      index: number
+    ) => React.ReactNode;
     /**
      * function returns React component for search input icon
      */
-    renderSearchInputRightIcon?: (selectedItem: any, index: number) => React.ReactNode;
+    renderSearchInputRightIcon?: (
+      selectedItem: any,
+      index: number
+    ) => React.ReactNode;
   } & (
     | {
         /**
@@ -142,7 +148,10 @@ declare module 'react-native-select-dropdown' {
         /**
          * function recieves selected item and its index, this function should return a React component as a child for dropdown button buttonStyle should be used for parent button view style.
          */
-        renderCustomizedButtonChild?: (selectedItem: any, index: number) => React.ReactNode;
+        renderCustomizedButtonChild?: (
+          selectedItem: any,
+          index: number
+        ) => React.ReactNode;
       }
   ) &
     (
@@ -156,7 +165,11 @@ declare module 'react-native-select-dropdown' {
           /**
            * function recieves item and its index, this function should return React component as a child for customized row rowStyle should be used for parent row view style.
            */
-          renderCustomizedRowChild?: (selectedItem: any, index: number, isSelected?: boolean) => React.ReactNode;
+          renderCustomizedRowChild?: (
+            selectedItem: any,
+            index: number,
+            isSelected?: boolean
+          ) => React.ReactNode;
         }
     );
 

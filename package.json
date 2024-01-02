@@ -1,6 +1,6 @@
 {
   "name": "@owonie/react-native-select-dropdown-customized",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react-native-select-dropdown customized project.",
   "main": "index.js",
   "typings": "index.d.ts",
