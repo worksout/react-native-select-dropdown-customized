@@ -5,7 +5,8 @@ npm i @owonie/react-native-select-dropdown-customized
 ```
 
 - v0.1.2
-  Add renderEmptyCustomizedRowChild for custom empty row child component.
+
+Add renderEmptyCustomizedRowChild for custom empty row child component.
 
 - v0.1.0
 
