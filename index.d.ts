@@ -171,6 +171,12 @@ declare module '@owonie/react-native-select-dropdown-customized' {
             isSelected?: boolean
           ) => React.ReactNode;
         }
+      | {
+          /**
+           * This function should return React component as a child for customized row rowStyle should be used for parent row view style.
+           */
+          renderEmptyCustomizedRowChild?: () => React.ReactNode;
+        }
     );
 
   export default class SelectDropdown extends React.Component<SelectDropdownProps> {
