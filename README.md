@@ -1,7 +1,7 @@
 # Customization information
 
 ```
-npm i @owonie/react-native-select-dropdown-customized
+npm i react-native-select-dropdown-customized
 ```
 
 SelectDropdown 에서 Search 기능 사용 중 결과 값이 없을 때 공백이 표시되는 문제가 있다. 이를 해결하기 위해, renderCustomizedButtonChild 라는 속성을 추가하여 재배포했다.
