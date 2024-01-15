@@ -4,6 +4,7 @@
 
 providing the "renderEmptyCustomizedRowChild" prop when the dropdown search results are empty.
 
+
 ## Installation
 
 #### # Using npm
@@ -489,6 +490,8 @@ function callback when the search input text changes, this will automatically di
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+---
 
 # Version notes
 
