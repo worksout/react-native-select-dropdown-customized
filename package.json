@@ -1,6 +1,6 @@
 {
   "name": "react-native-select-dropdown-customized",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "react-native-select-dropdown customized project.",
   "main": "index.js",
   "typings": "index.d.ts",

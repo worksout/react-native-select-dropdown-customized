@@ -1,118 +1,22 @@
-# Customization information
+# react-native-select-dropdown-customized
 
-```
-npm i react-native-select-dropdown-customized
-```
+"react-native-select-dropdown-customized" is a customized library based on "react-native-select-dropdown",
 
-SelectDropdown 에서 Search 기능 사용 중 결과 값이 없을 때 공백이 표시되는 문제가 있다. 이를 해결하기 위해, renderCustomizedButtonChild 라는 속성을 추가하여 재배포했다.
+providing the "renderEmptyCustomizedRowChild" prop when the dropdown search results are empty.
 
-```JSX
-   <SelectDropdown
-        defaultValue={'United Kingdom'}
-        data={countryList}
-        search={true}
-	...
-	// 기본으로 출력할 row child 컴포넌트 등록
-        renderCustomizedRowChild={(selectedItem: string) => {
-          return (
-            <View style={styles.rowchild}>
-              <Text style={styles.rowchild_text}>
-                {selectedItem.toUpperCase()}
-              </Text>
-              <Text style={styles.rowchild_text}>
-                +{countryCodes[selectedItem]}
-              </Text>
-            </View>
-          );
-        }}
-	// 결과물이 없을 때 보여줄 컴포넌트 등록
-        renderEmptyCustomizedRowChild={() => {
-          return (
-            <View style={styles.rowchild}>
-              <Text style={styles.rowchild_text}>NO RESULT</Text>
-              <Text style={styles.rowchild_text}> </Text>
-            </View>
-          );
-        }}
-        ...
-      />
-```
-renderCustomizedRowChild 의 사용법과 동일하게, renderEmptyCustomizedRowChild에 원하는 컴포넌트를 등록해주면 된다. 
-
-# custom source code version
-
-- v0.1.3
-
-Change library registry. Change visibility into public.
-
-- v0.1.2
-
-Add renderEmptyCustomizedRowChild for custom empty row child component.
-
-- v0.1.0
-
-Add text component ("NO RESULT") when dropdown searching keywords are not working.
-
---------------------
- 
-아래는 원본 라이브러리의 Readme입니다.
-
-# react-native-select-dropdown 
-
-react-native-select-dropdown is a highly customized dropdown | select | picker | menu for react native that works for android and iOS platforms.
 
 ## Installation
 
 #### # Using npm
 
 ```bash
-npm install react-native-select-dropdown
+npm install react-native-select-dropdown-customized
 ```
 
 #### # Using yarn
 
 ```bash
-yarn add react-native-select-dropdown
-```
-
-## Demo
-
-#### Code provided in Examples folder.
-
-<p float="left">
-	<img src="https://i.postimg.cc/4yYR8V3L/Simulator-Screen-Recording-i-Phone-13-Pro-2022-03-28-at-21-35-46.gif" width="300" height="650">
-	<img src="https://i.postimg.cc/m2fkJgQX/Simulator-Screen-Recording-i-Phone-13-Pro-2022-03-28-at-21-43-59.gif" width="300" height="650">
-</p>
-
-#### Search Functionality (Code provided in Examples folder).
-
-<p float="left">
-	<img src="https://i.postimg.cc/GmYnZVF0/Simulator-Screen-Recording-i-Phone-12-Pro-2022-05-31-at-13-58-28.gif" width="300" height="650">
-</p>
-
-## Usage
-
-```
-import SelectDropdown from 'react-native-select-dropdown'
-...
-const countries = ["Egypt", "Canada", "Australia", "Ireland"]
-...
-<SelectDropdown
-	data={countries}
-	onSelect={(selectedItem, index) => {
-		console.log(selectedItem, index)
-	}}
-	buttonTextAfterSelection={(selectedItem, index) => {
-		// text represented after item is selected
-		// if data array is an array of objects then return selectedItem.property to render after item is selected
-		return selectedItem
-	}}
-	rowTextForSelection={(item, index) => {
-		// text represented for each item in dropdown
-		// if data array is an array of objects then return item.property to represent item in dropdown
-		return item
-	}}
-/>
+yarn add react-native-select-dropdown-customized
 ```
 
 ### Props
@@ -170,6 +74,8 @@ const countries = ["Egypt", "Canada", "Australia", "Ireland"]
 - [`selectedRowTextStyle`](#selectedRowTextStyle)
 
 - [`renderCustomizedRowChild`](#renderCustomizedRowChild)
+
+- [`renderEmptyCustomizedRowChild`](#renderEmptyCustomizedRowChild)
 
 - [`search`](#search)
 
@@ -472,6 +378,16 @@ function recieves item and its index, this function should return React componen
 
 ---
 
+### renderEmptyCustomizedRowChild
+
+This function should return React component as a child for customized row `rowStyle` should be used for parent row view style.
+
+| Type     | Required |
+| -------- | -------- |
+| function | No       |
+
+---
+
 ### search
 
 enable search functionality
@@ -574,3 +490,23 @@ function callback when the search input text changes, this will automatically di
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+# Version notes
+
+- v0.1.4
+
+Update Readme.
+
+- v0.1.3
+
+Change library registry. Change visibility into public.
+
+- v0.1.2
+
+Add renderEmptyCustomizedRowChild for custom empty row child component.
+
+- v0.1.0
+
+Add text component ("NO RESULT") when dropdown searching keywords are not working.
