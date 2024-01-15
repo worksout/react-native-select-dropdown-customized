@@ -41,6 +41,10 @@ renderCustomizedRowChild 의 사용법과 동일하게, renderEmptyCustomizedRow
 
 # custom source code version
 
+- v0.1.3
+
+Change library registry. Change visibility into public.
+
 - v0.1.2
 
 Add renderEmptyCustomizedRowChild for custom empty row child component.
