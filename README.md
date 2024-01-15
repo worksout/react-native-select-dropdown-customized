@@ -4,6 +4,43 @@
 npm i @owonie/react-native-select-dropdown-customized
 ```
 
+SelectDropdown 에서 Search 기능 사용 중 결과 값이 없을 때 공백이 표시되는 문제가 있다. 이를 해결하기 위해, renderCustomizedButtonChild 라는 속성을 추가하여 재배포했다.
+
+```JSX
+   <SelectDropdown
+        defaultValue={'United Kingdom'}
+        data={countryList}
+        search={true}
+	...
+	// 기본으로 출력할 row child 컴포넌트 등록
+        renderCustomizedRowChild={(selectedItem: string) => {
+          return (
+            <View style={styles.rowchild}>
+              <Text style={styles.rowchild_text}>
+                {selectedItem.toUpperCase()}
+              </Text>
+              <Text style={styles.rowchild_text}>
+                +{countryCodes[selectedItem]}
+              </Text>
+            </View>
+          );
+        }}
+	// 결과물이 없을 때 보여줄 컴포넌트 등록
+        renderEmptyCustomizedRowChild={() => {
+          return (
+            <View style={styles.rowchild}>
+              <Text style={styles.rowchild_text}>NO RESULT</Text>
+              <Text style={styles.rowchild_text}> </Text>
+            </View>
+          );
+        }}
+        ...
+      />
+```
+renderCustomizedRowChild 의 사용법과 동일하게, renderEmptyCustomizedRowChild에 원하는 컴포넌트를 등록해주면 된다. 
+
+# custom source code version
+
 - v0.1.2
 
 Add renderEmptyCustomizedRowChild for custom empty row child component.
@@ -12,7 +49,11 @@ Add renderEmptyCustomizedRowChild for custom empty row child component.
 
 Add text component ("NO RESULT") when dropdown searching keywords are not working.
 
-# react-native-select-dropdown
+--------------------
+ 
+아래는 원본 라이브러리의 Readme입니다.
+
+# react-native-select-dropdown 
 
 react-native-select-dropdown is a highly customized dropdown | select | picker | menu for react native that works for android and iOS platforms.
 
