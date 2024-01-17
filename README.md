@@ -495,6 +495,10 @@ function callback when the search input text changes, this will automatically di
 
 # Version notes
 
+- v0.1.5
+
+Hot fix: index.d.ts 
+
 - v0.1.4
 
 Update Readme.
