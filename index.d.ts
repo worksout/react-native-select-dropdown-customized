@@ -1,7 +1,7 @@
 import type * as React from 'react';
 import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
-declare module '@owonie/react-native-select-dropdown-customized' {
+declare module 'react-native-select-dropdown-customized' {
   export type SelectDropdownProps = {
     /**
      * array of data that will be represented in dropdown, can be array of objects
