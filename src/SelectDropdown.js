@@ -134,7 +134,7 @@ const SelectDropdown = (
   /* ******************** Render Methods ******************** */
   const renderSearchView = () => {
     return (
-      search && (
+      search && data.length && (
         <Input
           searchViewWidth={buttonLayout.w}
           value={searchTxt}
