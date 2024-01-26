@@ -134,7 +134,7 @@ const SelectDropdown = (
   /* ******************** Render Methods ******************** */
   const renderSearchView = () => {
     return (
-      search && (
+      search && data.length && (
         <Input
           searchViewWidth={buttonLayout.w}
           value={searchTxt}
@@ -227,7 +227,7 @@ const SelectDropdown = (
             backgroundColor={dropdownOverlayColor}
           />
           <DropdownWindow layoutStyle={dropdownWindowStyle}>
-            {dataArr.length === 0 ? (
+            {dataArr?.length === 0 ? (
               <FlatList
                 data={['NO RESULT']}
                 keyExtractor={(item, index) => index.toString()}
